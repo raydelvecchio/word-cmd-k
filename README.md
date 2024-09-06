@@ -1,5 +1,5 @@
-# Word CMD + K
-Cursor-style cmd+k for Word, as an Add-in.
+# Microsoft Word CMD + K
+Cursor-style cmd+k for Word, as an Add-in. Install this Add-in, highlight text, press cmd+k, and ***edit away!***
 
 # Notes
 * This was built using **Microsoft Office Add-ins Development Kit** on VSCode
