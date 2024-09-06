@@ -1,6 +1,11 @@
 # Microsoft Word CMD + K
 Cursor-style cmd+k for Word, as an Add-in. Install this Add-in, highlight text, press cmd+k, and ***edit away!***
 
+# Run Instructions [DEV]
+1. `npm install` all dependencies.
+2. `npm run devserver` to spin up the development server (required for sideloading this add-in to Word). This will take ~1 minute to fully be live.
+3. `npm run start`
+
 # Notes
 * This was built using **Microsoft Office Add-ins Development Kit** on VSCode
 * You must `sudo npm install` before running anything here
@@ -27,3 +32,11 @@ Cursor-style cmd+k for Word, as an Add-in. Install this Add-in, highlight text, 
 
 # [FROM MICROSOFT]: Build Word add-ins using Office Add-ins Development Kit
 Word add-ins are integrations built by third parties into Word by using [Word JavaScript API](https://learn.microsoft.com/en-us/office/dev/add-ins/reference/overview/word-add-ins-reference-overview) and [Office Platform capabilities](https://learn.microsoft.com/en-us/office/dev/add-ins/overview/office-add-ins).
+
+# TODOs:
+* Figure out how to override the global scope of the project now just the task pane for cmd+k
+    * Perhaps have a `Function Command` button to do this?
+        * Docs on this here: https://learn.microsoft.com/en-us/office/dev/add-ins/design/add-in-commands
+* Allow for other LLM types and models, not just OpenAI and GPT4o
+* Custom system prompt additions
+* Deploy this and make it live (holy shit though fuck microsoft dev environments this was ass to set up)
