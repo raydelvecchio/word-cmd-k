@@ -1,6 +1,9 @@
 # Microsoft Word CMD + K
 Cursor-style cmd+k for Word, as an Add-in. Install this Add-in, highlight text, press cmd+k, and ***edit away!***
 
+## Demo
+![Word CMD+K Demo](demo.gif)
+
 # Run Instructions [DEV]
 0. Ensure you have Microsoft word installed locally (I devved this on Mac, not tested on windows), and you're logged in with a Microsoft account and valid Word license.
 1. `npm install` all dependencies.
