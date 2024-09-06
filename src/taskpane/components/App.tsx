@@ -1,5 +1,6 @@
 import * as React from "react";
 import { makeStyles, Input, Button, Text } from "@fluentui/react-components";
+import { validateOpenAIApiKey } from "../openai";
 
 interface AppProps {
   title: string;
@@ -69,12 +70,8 @@ const App: React.FC<AppProps> = () => {
     if (apiKey.trim() !== "") {
       setIsLoading(true);
       try {
-        const response = await fetch("https://api.openai.com/v1/models", {
-          headers: {
-            "Authorization": `Bearer ${apiKey.trim()}`
-          }
-        });
-        if (response.ok) {
+        const validated = await validateOpenAIApiKey(apiKey.trim());
+        if (validated) {
           setIsKeyValid(true);
         } else {
           setIsKeyValid(false);
