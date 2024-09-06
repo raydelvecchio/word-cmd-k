@@ -1,4 +1,4 @@
-import { getCommandKSystemPrompt, getCommandKUserPrompt } from "./functions/prompts";
+import { getCommandKSystemPrompt, getCommandKUserPrompt } from "./prompts";
 
 export async function validateOpenAIApiKey(apiKey: string): Promise<boolean> {
     /*
