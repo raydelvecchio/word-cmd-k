@@ -1,18 +1,6 @@
 # Word CMD + K
 Cursor-style cmd+k for Word, as an Add-in.
 
-# Build Word add-ins using Office Add-ins Development Kit
-
-Word add-ins are integrations built by third parties into Word by using [Word JavaScript API](https://learn.microsoft.com/en-us/office/dev/add-ins/reference/overview/word-add-ins-reference-overview) and [Office Platform capabilities](https://learn.microsoft.com/en-us/office/dev/add-ins/overview/office-add-ins).
-
-# [FROM MICROSOFT]: Export the Base Add-In Code
-
-To explore an Office add-in project, you can start with the key files listed below.
-
-- The `./manifest.xml` file in the root directory of the project defines the settings and capabilities of the add-in.  <br>You can check whether your manifest file is valid by selecting **Validate Manifest File** option from the Office Add-ins Development Kit.
-- The `./src/taskpane/taskpane.html` file contains the HTML markup for the task pane.
-- The `./src/taskpane/**/*.tsx` file contains the react code and Office JavaScript API code that facilitates interaction between the task pane and the Word application.
-
 # Notes
 * This was built using **Microsoft Office Add-ins Development Kit** on VSCode
 * You must `sudo npm install` before running anything here
@@ -26,6 +14,8 @@ To explore an Office add-in project, you can start with the key files listed bel
 * Microsoft word caching extensions heavily. You can find the cache in `/Users/<username>/Library/Containers/com.microsoft.Word/Data/Library/Caches`.
     * If you need to reset the state of word, just delete the caches folder!
 * The development server must be running on https for this to work! Word does not support running on HTTP
+    * You can start it with `npm run devserver`
+    * This devserver will be started in ~1 minute, and auto-reloads upon save!
 
 # Error Log
 * `Add-in Error: Sorry, we can't load the add-in. Please make sure you have internet connectivity.`
@@ -33,3 +23,7 @@ To explore an Office add-in project, you can start with the key files listed bel
     * I guess the development server isn't up or something? 
     * Fixed this by adding `npm run devserver` command, which builds the webpack in dev mode for the web server!
         * This command must be run before we `npm run start` to test this out
+        * This takes a while to start up however, the plugin may appear as loading for a bit
+
+# [FROM MICROSOFT]: Build Word add-ins using Office Add-ins Development Kit
+Word add-ins are integrations built by third parties into Word by using [Word JavaScript API](https://learn.microsoft.com/en-us/office/dev/add-ins/reference/overview/word-add-ins-reference-overview) and [Office Platform capabilities](https://learn.microsoft.com/en-us/office/dev/add-ins/overview/office-add-ins).
