@@ -2,6 +2,7 @@
 Cursor-style cmd+k for Word, as an Add-in. Install this Add-in, highlight text, press cmd+k, and ***edit away!***
 
 # Run Instructions [DEV]
+0. Ensure you have Microsoft word installed locally (I devved this on Mac, not tested on windows), and you're logged in with a Microsoft account and valid Word license.
 1. `npm install` all dependencies.
 2. `npm run devserver` to spin up the development server (required for sideloading this add-in to Word). This will take ~1 minute to fully be live.
 3. `npm run start`
